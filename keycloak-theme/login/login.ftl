@@ -18,7 +18,7 @@
                 <#if realm.password>
                     <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                         <div class="${properties.kcFormGroupClass!} cds--text-input-wrapper">
-                            <label for="username" class="${properties.kcLabelClass!}"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
+                            <label for="username" class="${properties.kcLabelClass!}"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("loginUsername")}<#else>${msg("email")}</#if></label>
                             <#if usernameEditDisabled??>
                                 <input id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" disabled />
                             <#else>
@@ -30,7 +30,7 @@
                                                 <path d="M7.5,4h1v5h-1C7.5,9,7.5,4,7.5,4z M8,12.2c-0.4,0-0.8-0.4-0.8-0.8s0.3-0.8,0.8-0.8	c0.4,0,0.8,0.4,0.8,0.8S8.4,12.2,8,12.2z" data-icon-path="inner-path" opacity="0"></path>
                                             </svg>
                                         </#if>
-                                        <input id="username" class="login-input <#if messagesPerField.existsError('username','password')>cds--text-input--invalid</#if>" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off"
+                                        <input placeholder="${msg("loginUsernamePlaceholder")}" id="username" class="login-input <#if messagesPerField.existsError('username','password')>cds--text-input--invalid</#if>" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off"
                                             aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
                                             <#if messagesPerField.existsError('username','password')>data-invalid="true"</#if>
                                         />
@@ -49,7 +49,7 @@
 
                         <div class="${properties.kcFormGroupClass!} cds--text-input-wrapper">
                             <div class="input-label-row">
-                                <label for="password" class="${properties.kcLabelClass!}">${msg("password")}</label>
+                                <label for="password" class="${properties.kcLabelClass!}">${msg("loginPassword")}</label>
                                 <div class="${properties.kcFormOptionsWrapperClass!}">
                                     <#if realm.resetPasswordAllowed>
                                         <span><a class="cds--link" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
@@ -63,7 +63,7 @@
                                         <path d="M7.5,4h1v5h-1C7.5,9,7.5,4,7.5,4z M8,12.2c-0.4,0-0.8-0.4-0.8-0.8s0.3-0.8,0.8-0.8	c0.4,0,0.8,0.4,0.8,0.8S8.4,12.2,8,12.2z" data-icon-path="inner-path" opacity="0"></path>
                                     </svg>
                                 </#if>
-                                <input placeholder="text" id="password" class="login-input" name="password" type="password" autocomplete="off"
+                                <input placeholder="${msg("loginPasswordPlaceholder")}" id="password" class="login-input" name="password" type="password" autocomplete="off"
                                     aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
                                     <#if messagesPerField.existsError('username','password')>data-invalid="true"</#if>
                                 />
