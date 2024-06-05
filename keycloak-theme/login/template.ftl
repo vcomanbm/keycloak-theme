@@ -116,7 +116,6 @@
                       <span class="${properties.kcAlertTitleClass!}">${kcSanitize(message.summary)?no_esc}</span>
               </div>
           </#if>
-
           <#nested "form">
 
             <#if auth?has_content && auth.showTryAnotherWayLink() && showAnotherWayIfPresent>

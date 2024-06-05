@@ -119,6 +119,17 @@ hr {
   }
 }
 
+.input-error {
+  background-color: #fee7e7;
+  border-color: #662929;
+  color: #662929;
+  outline: none !important;
+}
+
+.error-message {
+  color: #662929;
+}
+
 #kc-header-wrapper {
   display: none;
 }
