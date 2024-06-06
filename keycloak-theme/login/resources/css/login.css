@@ -6,6 +6,7 @@
 body {
   font-family: ibm-plex-sans, sans-serif;
   background-color: #022333;
+  background-image: url("../../assets/images/login-dark-background.png");
 }
 
 header {
@@ -72,6 +73,10 @@ hr {
   height: 100vh;
   display: flex;
   border-radius: 0 15px 15px 0;
+  background-image: url("../../assets/images/login-circle.png");
+  background-size: 550px 130px;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 @media (max-width: 950px) {
