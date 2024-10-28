@@ -190,6 +190,7 @@ hr {
   transition: box-shadow 0.3s ease;
   &:hover {
     box-shadow: 0px 4px 12px;
+    background-color: rgb(3, 61, 89);
   }
   svg {
     position: absolute;
@@ -200,4 +201,14 @@ hr {
     text-align: center;
     flex: 1;
   }
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-height: 90vh;
+  padding: 0 1rem;
+  margin: 0 auto;
 }

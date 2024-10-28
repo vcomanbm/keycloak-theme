@@ -20,7 +20,7 @@
               </div>
             </div>
           </#if>
-          <#elseif section="form">
+          <#elseif section="form">  
             <div id="kc-form">
               <div id="kc-form-wrapper">
                 <#if realm.password>

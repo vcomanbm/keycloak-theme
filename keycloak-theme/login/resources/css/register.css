@@ -1,0 +1,93 @@
+@font-face {
+  font-family: ibm-plex-sans;
+  src: url("../font/IBMPlexSans-Regular.ttf");
+}
+
+body {
+  font-family: ibm-plex-sans, sans-serif;
+  background-color: #022333;
+  background-image: url("../../assets/images/login-dark-background.png");
+}
+
+.registration-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-height: 95vh;
+  padding: 0 1.5rem;
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+}
+
+.registration-form {
+  width: 100%;
+  margin: 0;
+}
+
+.registration-form-item {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.registration-input-wrapper {
+  width: 100%;
+}
+
+.registration-input {
+  width: 100%;
+  height: 48px;
+  padding: 16px;
+  background-color: #e9eff2;
+  border: 1px solid #747e893b;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.registration-submit-btn {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #055880;
+  transition: background-color 0.3s;
+}
+
+.registration-submit-btn:hover {
+  background-color: rgb(3, 61, 89);
+}
+
+.registration-error-message {
+  color: #662929;
+  width: 100%;
+}
+
+.registration-google-button {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: white;
+  transition: box-shadow 0.3s;
+}
+
+.registration-google-button:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.registration-google-button svg {
+  margin-right: 8px;
+}
+
+.registration-google-button span {
+  text-align: center;
+  flex: 1;
+}
